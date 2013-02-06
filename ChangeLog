@@ -1,0 +1,3 @@
+2013-03-06 MD (tres.14159@gmail.com)
+	- server/main.py: added check if the server is running, at the
+	moment check if the port is taken.
