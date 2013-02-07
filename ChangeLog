@@ -1,3 +1,6 @@
 2013-03-06 MD (tres.14159@gmail.com)
+	- README.md: added intruccions for install Panda3D in Linux Mint 13.
+
+2013-03-06 MD (tres.14159@gmail.com)
 	- server/main.py: added check if the server is running, at the
 	moment check if the port is taken.

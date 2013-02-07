@@ -31,6 +31,18 @@ Launch the client
 
 Natty users should launch the client using python2.6
 
+Installation Panda3D instructions (Linux Mint 13)
+---------------------------------------------
+Download Panda3D (SDK 1.8.0 For Ubuntu Oneiric):
+
+https://www.panda3d.org/download/panda3d-1.8.0/panda3d1.8_1.8.0~oneiric_amd64.deb
+https://www.panda3d.org/download/panda3d-1.8.0/panda3d1.8_1.8.0~oneiric_i386.deb
+
+Download the packages dependencies:
+http://packages.ubuntu.com/oneiric/libhighgui2.1
+http://packages.ubuntu.com/oneiric/libcv2.1
+
+
 Installation instructions for the testers
 -----------------------------------------
 
