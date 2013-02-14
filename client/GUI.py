@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from Config import *
 import direct.directbase.DirectStart
 from direct.showbase import DirectObject
@@ -86,20 +88,29 @@ class Blueprint(DirectObject.DirectObject):
         self.frame.setTransparency(True)
 
 class LoginWindow(DirectObject.DirectObject):
-
+    def tab_hook(self,arg):
+        if (self.passwordEntry["focus"]):
+            self.loginEntry["focus"] = True
+            self.passwordEntry["focus"] = False
+        else:
+            self.passwordEntry["focus"] = True
+            self.loginEntry["focus"] = False
+    
     def __init__(self, command):
+        self.accept("tab", self.tab_hook, [0])
+        self.accept("tab-repeat", self.tab_hook, [0])
         
         self.frame = DirectFrame(
             frameColor = (1, 1, 1, .25),
             frameSize = ( -v*56, v*56, -v*22, v*22 ),
             pos = (v*10, 0, -v*0),
-            geom = WindowNodeDrawer(112, 44, 'shadowed', 'Login'),
+            geom = WindowNodeDrawer(112, 44, 'shadowed', _('Login')),
             scale = 0.1,
         )
         self.frame.setTransparency(True)
 
         self.loginLabel = DirectLabel(
-            text = 'Username:',
+            text = _('Username:'),
             color = (0,0,0,0),
             scale = regularscale,
             text_font = regularfont,
@@ -121,7 +132,7 @@ class LoginWindow(DirectObject.DirectObject):
         self.loginEntry.setPos(-v*6, 0, v*4)
 
         self.passwordLabel = DirectLabel(
-            text = 'Password:',
+            text = _('Password:'),
             color = (0,0,0,0),
             scale = regularscale,
             text_font = regularfont,
@@ -144,7 +155,7 @@ class LoginWindow(DirectObject.DirectObject):
 
         connectButton = DirectButton(
             scale = regularscale,
-            text  = ("Connect", "Connect", "Connect", "disabled"),
+            text  = (_("Connect"), _("Connect"), _("Connect"), _("Connect")),
             command = command,
             color = (.62, .6, .5, 1),
             text_font = regularfont,

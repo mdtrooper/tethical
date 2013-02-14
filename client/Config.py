@@ -1,4 +1,7 @@
 import sys
+import os.path
+import gettext
+
 from panda3d.core import loadPrcFile
 from pandac.PandaModules import ConfigVariableString
 loadPrcFile("../config.prc")
@@ -22,3 +25,9 @@ SELECT_BTN   = ConfigVariableString('select-btn',   '5').getValue()
 SPRITE_SCALE = float( ConfigVariableString('sprite-scale', '2').getValue() )
 
 THEME = ConfigVariableString('theme', 'default').getValue()
+
+#Set the gettext
+TRANSLATION_DOMAIN = "tethical_client"
+LOCALE_DIR = os.path.join(os.path.dirname(__file__), "locale")
+
+gettext.install(TRANSLATION_DOMAIN, LOCALE_DIR)

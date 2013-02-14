@@ -11,3 +11,4 @@ r1-btn g
 r2-btn h
 start-btn enter
 select-btn shift
+text-encoding utf8
