@@ -1,4 +1,19 @@
 2013-03-06 MD (tres.14159@gmail.com)
+	- client/Config.py: added gettext support.
+	
+	- client/GUI.py: added the first calls to translate and improve the
+	login window with the tab key.
+	
+	- client/gettext_pot_generator.sh: added small script to generate
+	pot files.
+	
+	- client/locale/es/LC_MESSAGES/tethical_client.mo,
+	client/locale/es/tethical_client.po,
+	client/locale/tethical_client.pot: 
+	
+	- config.prc: added support for UTF8.
+
+2013-03-06 MD (tres.14159@gmail.com)
 	- README.md: added intruccions for install Panda3D in Linux Mint 13.
 
 2013-03-06 MD (tres.14159@gmail.com)
