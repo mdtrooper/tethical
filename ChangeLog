@@ -1,3 +1,7 @@
+2013-03-15 MD (tres.14159@gmail.com)
+	- client/main.py: the holy war in python (tabs vs spaces)...I
+	prefert tabs. And added UTF8 python2 hack.
+
 2013-03-06 MD (tres.14159@gmail.com)
 	- client/Config.py: added gettext support.
 	
